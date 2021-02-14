@@ -1,0 +1,45 @@
+{
+  "name": "sleet",
+  "version": "1.0.0",
+  "description": "Simple theme for starting the theme building from scratch",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build --prod",
+    "bundle": "gulp bundle --prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Infvyr/sleet"
+  },
+  "author": "Infvyr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Infvyr/sleet/issues"
+  },
+  "homepage": "https://github.com/Infvyr/sleet#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/register": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^5.0.2",
+    "node-sass": "^5.0.0",
+    "vinyl-named": "^1.1.0",
+    "webpack-stream": "^6.1.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "yargs": "^16.2.0"
+  }
+}
