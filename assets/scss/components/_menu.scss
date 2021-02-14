@@ -1,0 +1,156 @@
+@import "hamburgers/hamburgers";
+@import "../vendors/mmenu";
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: $menu-bg-colour;
+}
+
+.site-logo {
+    &__url {
+        display: inline-block;
+        max-width: 300px;
+        width: 100%;
+    }
+
+    &__image {
+        height: 100px;
+        width: inherit;
+        object-fit: contain;
+    }
+
+    &__tagline {
+        margin-top: 0;
+        color: var(--color-8);
+    }
+
+    &--no-url {
+        cursor: default;
+    }
+}
+
+// main-navigation
+.main-navigation {
+    height: 100%;
+    @include d-flex {
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+.site-menu {
+    @include d-flex {
+        justify-content: getJustify(fe);
+    }
+
+    > .menu-item {
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+    }
+}
+
+.site-nav {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+    }
+
+    .menu-item {
+        display: block;
+        float: left;
+        position: relative;
+        text-decoration: none;
+        transition-duration: $animation-duration;
+
+        &:focus-within {
+            cursor: pointer;
+        }
+
+        &:focus-within a {
+            outline: none;
+        }
+    }
+
+    a {
+        padding: 1rem;
+        display: block;
+    }
+
+    ul > li > ul {
+        visibility: hidden;
+        opacity: 0;
+        min-width: 5rem;
+        @include position(absolute, left 0);
+        @include transition(all $animation-duration $animation-timing-function);
+        display: none;
+    }
+
+    ul li:hover > ul,
+    ul li:focus-within > ul,
+    ul li ul:hover,
+    ul li ul:focus {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        z-index: 1;
+        background-color: $menu-bg-colour;
+    }
+
+    ul > li > ul > li {
+        clear: both;
+        width: 100%;
+    }
+
+    ul > li > ul > li > .sub-menu,
+    ul > li > ul > li > .sub-menu > .menu-item-has-children > .sub-menu {
+        @include position(absolute, top 0 left 100%);
+        width: 100%;
+    }
+
+    @media (max-width: 1199px) {
+        display: none;
+    }
+}
+
+// hamburger
+.hamburger--emphatic {
+    &:not(.is-active) {
+        .hamburger-inner {
+            &::before,
+            &::after {
+                width: 1.6rem;
+            }
+        }
+    }
+}
+
+.mobile-menu-btn {
+    @include screen("desktop") {
+        display: none;
+    }
+}
+
+// mobile menu
+.mobile-nav {
+    background-color: $menu-bg-colour;
+
+    &.mm-menu_opened {
+        z-index: 99999;
+    }
+
+    @include screen("desktop") {
+        display: none;
+    }
+}
+
+.mobile-menu {
+    a {
+        padding: 0.5rem 1rem;
+        display: inline-block;
+        font-size: 1.8rem;
+    }
+}

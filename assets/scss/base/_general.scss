@@ -1,0 +1,177 @@
+*{
+    outline: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%; // for rem; 16px = 1rem, 8px = .8rem;
+    scroll-behavior: smooth;
+    -ms-overflow-style: scrollbar;
+}
+
+body{
+    font-family: $primary-font;
+    font-weight: $fw-regular;
+    font-size: $body-text-size;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-kerning: normal;
+    line-height: $body-line-height;
+    color: $text-colour;
+}
+
+a{
+    color: $colour-4;
+    text-decoration: none;
+    @include transition(color $animation-duration $animation-timing-function, background-color $animation-duration $animation-timing-function);
+
+    &:hover{
+        color: $link-hover-colour;
+    }
+}
+
+img{
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin: 0;
+    color: $colour-1;
+}
+
+p{
+    margin: 0;
+}
+
+*+p{
+    margin-top: 2.5rem;
+}
+
+.horizontal-line{
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba($hr-colour, .5);
+    //opacity: .5;
+}
+
+.edit-link{
+    .post-edit-link{
+        color: $success-colour;
+    }
+}
+
+label{
+    font-size: $h6-size;
+    font-weight: $fw-medium;
+    cursor: pointer;
+}
+
+.text-danger{
+    color: $error-colour;
+}
+
+input{
+    padding: 3px 1rem;
+    height: 4rem;
+    border: 0;
+    border-radius: $border-radius;
+    background-color: $colour-7;
+}
+
+.select-group {
+    position: relative;
+    height: 4rem;
+    /*background: white;*/
+    /*box-shadow: 0 3px 0 rgba(0,0,0,.05);*/
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 0;
+        right: 1rem;
+        bottom: 0;
+        margin: auto;
+        border-style: solid;
+        border-width: 5px 5px 0 5px;
+        border-color: $colour-8 transparent transparent transparent;
+        pointer-events: none;
+    }
+
+    &:before {
+        width: 3rem;
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        bottom: 1px;
+        background: $colour-7;
+        content: '';
+        pointer-events: none;
+    }
+
+    select {
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        outline: none;
+        padding-right: 35px;
+        padding-left: 15px;
+        font-size: 1.6rem;
+        background: $colour-7;
+        //color: $colour-1;
+
+        // Disable default styling on firefox
+        -moz-appearance: none;
+
+        // Disable ugly ass outline on firefox
+        &:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 #000;
+        }
+
+        // Disable default styling on webkit browsers
+        -webkit-appearance: none;
+
+        // Disable default arrow on IE 11+
+        &::-ms-expand {
+            display: none;
+        }
+
+        &:focus {
+            border-color: transparent;
+        }
+    }
+}
+
+// svg
+svg{
+    path{
+        @include transition(fill $animation-duration $animation-timing-function);
+    }
+}
+
+.no-list-type{
+    list-style-type: none;
+}

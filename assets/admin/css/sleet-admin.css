@@ -1,0 +1,15 @@
+.float-none{
+    float: none !important;
+}
+
+#wpadminbar #wp-admin-bar-site-name > .ab-item:before{
+    background-image: url("/wp-content/uploads/2021/01/Liverbird.png") !important;
+    content: '' !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 12px;
+    position: relative;
+    top: 7px;
+}

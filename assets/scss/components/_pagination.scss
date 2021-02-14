@@ -1,0 +1,104 @@
+.pagination-wrapper{
+  margin-top: 54px;
+  margin-bottom: 10rem;
+  width: 100%;
+
+  .nav-links{
+    @include d-flex{
+      align-items: getAlign(c);
+      justify-content: getJustify(c);
+      flex-wrap: wrap;
+    }
+  }
+
+  .current{
+    background-color: $color-9;
+    color: #333;
+    border: 1px solid transparent;
+  }
+
+  .current,
+  .page-numbers{
+    margin-right: 11px;
+    margin-left: 11px;
+  }
+
+  .page-numbers{
+    @include d-flex{
+      align-items: getAlign(c);
+      justify-content: getJustify(c);
+    }
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    border-radius: $border-radius;
+    font-size: 1.8rem;
+    font-weight: $font-weight-semibold;
+    transition: background-color $animation-duration $animation-timing-function, color $animation-duration $animation-timing-function;
+
+    &.next,
+    &.prev{
+      border: 0 !important;
+    }
+
+    &:not(.current){
+      color: rgba(51, 51, 51, .3);
+      border: 1px solid $color-9;
+
+      &:hover{
+        color: #333 !important;
+        background-color: $color-9;
+      }
+    }
+  }
+
+  .prev{
+    .svg-caret{
+      transform: rotateY(-180deg);
+    }
+  }
+  .svg-caret{
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+// pagination jplist
+.pagination-wrapper{
+  &.jplist-pagination{
+    @include d-flex{
+      align-items: getAlign(c);
+      justify-content: getJustify(c);
+    }
+
+    .jplist-holder{
+      @include d-flex{
+        align-items: getAlign(c);
+        flex-wrap: wrap;
+      }
+    }
+    .prev,
+    .next{
+      background-color: transparent;
+
+      &:hover{
+        background-color: inherit;
+      }
+    }
+
+    .page-numbers{
+      cursor: pointer;
+
+      &:not(.prev),
+      &:not(.next){
+        background-color: transparent;
+
+        &:hover{
+          background-color: $color-9;
+        }
+      }
+    }
+  }
+}

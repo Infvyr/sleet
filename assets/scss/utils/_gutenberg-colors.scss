@@ -1,0 +1,21 @@
+$colors: ( black, #000 ),
+        ( white, #fff ),
+        ( dark_grey, #363A36 ),
+        ( light, #F3F1ED ),
+        ( dark_beige, #D6D1C4 ),
+        ( red, #D0103A );
+
+
+/* Color Options
+--------------------------------------------- */
+
+@each $name, $color in $colors {
+
+  .has-#{$name}-color {
+    color: $color;
+  }
+
+  .has-#{$name}-background-color {
+    background-color: $color;
+  }
+}

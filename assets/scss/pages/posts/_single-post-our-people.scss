@@ -1,0 +1,136 @@
+.single-our-people{
+  .site-header{
+    box-shadow: 0px 3px 1rem #00000033;
+  }
+
+  .site-main{
+    margin-top: 10rem;
+    margin-bottom: 180px;
+
+    @include screen('mobile'){
+      margin-top: 0;
+      margin-bottom: 60px;
+    }
+  }
+
+  .entry-header{
+    margin-bottom: 39px;
+
+    @include screen('max-width: 576px'){
+      display: none;
+    }
+  }
+
+  .post__title{
+    font-size: 28px;
+  }
+
+  .inline-link{
+    display: inline-flex;
+    align-items: center;
+
+    &:hover{
+      text-decoration: underline;
+      color: inherit !important;
+    }
+
+    .svg-envelope{
+      margin-right: 1rem;
+      width: 20px;
+    }
+    .text{
+      font-size: 15px;
+    }
+  }
+
+  .post-content{
+    &__article{
+      @include screen('desktop'){
+        padding-left: 80px;
+      }
+    }
+  }
+
+  .entry-content{
+    margin-bottom: 4rem;
+  }
+
+  .post-card__content{
+    min-height: auto;
+  }
+
+  .post-card__cats{
+    margin-bottom: 15px;
+
+    span{
+      @include screen('tablet'){
+        font-size: 1.4rem;
+      }
+    }
+
+    @include screen('max-width: 576px'){
+      margin-bottom: .8rem;
+    }
+  }
+
+  .post-card__department:after{
+    height: 1.6rem;
+    width: 2px;
+
+    @include screen('tablet'){
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  }
+
+  .edit-link{
+    display: block;
+  }
+
+}
+
+.single-our-people-sidebar{
+  .post-card{
+    @include screen('max-width: 576px'){
+      margin-bottom: 50px;
+      display: block;
+
+      &__header{
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+
+      .wp-post-image{
+        height: 228px;
+        object-position: center;
+      }
+
+      &__content{
+        margin-top: 52px;
+
+        &-inner{
+          font-size: 1.8rem;
+          line-height: 1.6;
+        }
+      }
+
+      &__footer-inner{
+        a{
+          @include screen('max-width: 576px'){
+            width: 72px;
+          }
+        }
+      }
+
+      &__job-title{
+        @include screen('max-width: 576px'){
+          margin-top: 2px;
+        }
+      }
+
+      strong{
+        font-weight: $fw-regular;
+      }
+    }
+  }
+}

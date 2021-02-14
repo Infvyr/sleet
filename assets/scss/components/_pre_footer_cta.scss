@@ -1,0 +1,59 @@
+.pre-footer-cta{
+  margin-bottom: 10rem;
+  position: relative;
+
+  p{
+    font-size: 1.8rem;
+    color: $colour-white;
+
+    @include screen('mobile'){
+      margin-top: .8rem;
+      font-size: 15px;
+    }
+  }
+
+  &__img{
+    height: 380px;
+    width: 100%;
+    object-fit: cover;
+
+    @include screen('mobile'){
+      height: 250px;
+    }
+  }
+
+  &__heading{
+    color: $colour-white;
+
+    @include screen('mobile'){
+      font-size: 28px;
+    }
+  }
+
+  &__wrapper{
+    @include absolute(top 50% left 50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    @media screen and (max-width: 480px){
+      top: 60%;
+    }
+  }
+
+  &__inner{
+    max-width: 975px;
+    margin: 0 auto;
+  }
+
+  &__text{
+    max-width: 385px;
+
+    @include screen('mobile'){
+      max-width: 100%;
+    }
+  }
+
+  @include screen('mobile'){
+    margin-bottom: 70px;
+  }
+}

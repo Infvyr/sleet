@@ -1,0 +1,29 @@
+.no-results{
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
+  .search-form{
+    margin-top: 1.2rem;
+
+    .screen-reader-text{
+      display: none;
+    }
+    .search-field{
+      @include screen('min-width: 576px'){
+        min-width: 360px;
+      }
+      @include screen('max-width: 575px'){
+        width: 100%;
+      }
+    }
+    .search-submit{
+      @include screen('max-width: 575px'){
+        margin-top: 15px;
+        width: 100%;
+      }
+      @include screen('min-width: 576px'){
+        margin-left: 15px;
+      }
+    }
+  }
+}

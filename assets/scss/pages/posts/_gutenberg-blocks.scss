@@ -1,0 +1,123 @@
+// Gutenberg blocks
+
+// Gallery
+.wp-block-gallery{
+  margin: 3rem 0;
+
+  &.columns-1{
+    .blocks-gallery-grid{
+      display: block;
+    }
+  }
+
+  &.columns-2,
+  &.columns-3{
+    .blocks-gallery-grid{
+      @include d-flex{
+        justify-content: getJustify(sb);
+      }
+
+      .blocks-gallery-item{
+        @include d-flex{
+          min-height: 100%;
+        }
+
+        &:not(:last-child){
+          margin-right: 3rem;
+        }
+
+        img{
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  &.columns-3{
+    .blocks-gallery-grid{
+      flex-wrap: wrap;
+      //justify-content: ;
+
+      .blocks-gallery-item{
+        margin-bottom: 15px;
+        flex: 1 1 calc((100% / 3) - 3rem);
+
+        &:nth-child(3n){
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .blocks-gallery-grid{
+    list-style-type: none;
+  }
+
+  figure{
+    margin: 0;
+    position: relative;
+
+    .blocks-gallery-item__caption{
+      @include absolute(bottom 3rem left 50%);
+      transform: translateX(-50%);
+    }
+  }
+
+  .blocks-gallery-caption{
+    margin-top: .75rem;
+    margin-bottom: .75rem;
+  }
+}
+
+.wp-block-embed,
+.wp-block-video{
+  margin: 0;
+
+  &.full-width{
+    iframe{
+      width: 100%;
+    }
+  }
+
+  figcaption{
+    margin-top: 1rem;
+    margin-bottom: 20px;
+  }
+}
+
+.wp-block-video video{
+  width: 100%;
+}
+
+.wp-block-pullquote{
+  margin: 0 auto;
+  max-width: 650px;
+
+  blockquote{
+    margin: 0;
+    padding: 1rem;
+    font-size: 2.2rem;
+    line-height: 34px;
+    opacity: .6;
+
+    @include screen('mobile'){
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  cite{
+    font-size: 1.8rem;
+  }
+}
+
+.wp-block-spacer{
+  @include screen('mobile'){
+    &.height-mobile-add-22{
+      height: 42px !important;
+    }
+    &.height-mobile-remove-19{
+      height: 5px !important;
+    }
+  }
+}

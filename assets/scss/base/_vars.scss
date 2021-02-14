@@ -1,0 +1,121 @@
+//= The following colours must be manually configured as required in design =//
+
+// basic colour palette
+$colour-1 : var(--color-1); // headings
+$colour-2 : var(--color-2); // text
+$colour-3 : var(--color-3); // buttons
+$colour-4 : var(--color-4); // links
+$colour-5 : var(--color-5); // bg colour
+$colour-6 : var(--color-6); // hr, border
+$colour-7 : var(--color-7); // light
+$colour-8 : var(--color-8); // dark
+
+// custom white and black colours
+$colour-white: white;
+$colour-black: black;
+
+
+// headings colour
+$heading-colour : $colour-1; // general heading's colour
+$h1-colour      : $colour-1; // particular case
+$h2-colour      : $colour-1; // particular case
+$h3-colour      : $colour-1; // particular case
+$h4-colour      : $colour-1; // particular case
+$h5-colour      : $colour-1; // particular case
+$h6-colour      : $colour-1; // particular case
+
+// links, buttons, inputs, border colour, body, menu, footer
+$link-initial-colour : $colour-4;
+$link-hover-colour   : var(--link-hover, #0085f9);
+$link-active-colour  : var(--link-active, #0085f9);
+$link-visited-colour : var(--link-visited, #113ddb);
+$text-colour         : $colour-2;
+$btn-initial-colour  : $colour-3;
+$btn-hover-colour    : var(--btn-hover, #db063f);
+$input-colour        : $colour-5;
+$border-colour       : $colour-6;
+$body-bg-colour      : var(--body-color, white);
+$menu-bg-colour      : var(--menu-container-bgc, white);
+$footer-bg-colour    : var(--footer-bgc, #191919);
+
+// error, validated text, horizontal line colour
+$error-colour   : #D0103A;
+$success-colour : #08a865;
+$hr-colour      : $colour-6;
+
+//= =========================== END =========================== =//
+
+// font weight
+$fw-light     : 300;
+$fw-regular   : 400;
+$fw-medium    : 500;
+$fw-semi-bold : 600;
+$fw-bold      : 700;
+$fw-heavy     : 900;
+
+// =====================================================
+
+// font family
+$primary-font   : "Suisse Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$secondary-font : "Suisse Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+// =====================================================
+
+// headings size
+$h1-size : var(--h1-size, 4rem);
+$h2-size : var(--h2-size, 3.6rem);
+$h3-size : var(--h3-size, 3.2rem);
+$h4-size : var(--h4-size, 2.6rem);
+$h5-size : var(--h5-size, 2.2rem);
+$h6-size : var(--h6-size, 1.8rem);
+
+// =====================================================
+
+// headings line height
+$h1-line-height : var(--h1-line-height, 5.2rem);
+$h2-line-height : var(--h2-line-height, 4.8rem);
+$h3-line-height : var(--h3-line-height, 4.2rem);
+$h4-line-height : var(--h4-line-height, 3.6rem);
+$h5-line-height : var(--h5-line-height, 3.2rem);
+$h6-line-height : var(--h6-line-height, 2.8rem);
+
+// =====================================================
+
+// body
+$body-text-size   : var(--text-size, 1rem);
+$body-line-height : var(--text-line-height, 2.4rem);
+
+// =====================================================
+
+// others styles
+$border-radius              : var(--border-radius, 4px);
+$btn-text-size              : var(--btn-text-size, 1.6rem);
+$animation-timing-function  : cubic-bezier(0.4, 0, 0.2, 1);
+$animation-duration         : 400ms;
+$shadow-colour              : rgba(34, 34, 34, 0.6);
+
+// =====================================================
+
+// Bootstrap Grid Customizer Settings
+$bs-cc-pad : var(--bs-cc-pad, 15px);
+$bs-sm-maw : var(--bs-sm-maw, 540px);
+$bs-md-maw : var(--bs-md-maw, 720px);
+$bs-lg-maw : var(--bs-lg-maw, 960px);
+$bs-xl-maw : var(--bs-xl-maw, 1170px);
+$bs-bs-maw : var(--bs-bs-maw, 1320px);
+
+// =====================================================
+
+// media query breakpoints
+$smartphone-portrait  : 380px;
+$smartphone-medium    : 640px;
+$smartphone-landscape : 767px;
+$tablet-small         : 768px;
+$tablet-medium        : 991px;
+$tablet-landscape     : 1024px;
+$desktop-small        : 1200px;
+$desktop-medium       : 1440px;
+$desktop-landscape    : 1600px;
+$desktop-full-hd      : 1920px;
+
+// =====================================================

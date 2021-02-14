@@ -1,0 +1,161 @@
+// Color Variations Array
+$prefix: color;
+$color-list: (
+    "red" $prefix $colour-3,
+    "black" $prefix $colour-8,
+    "white" $prefix $colour-7,
+    "grey" $prefix $colour-5
+);
+
+// ------------------------------
+//  BUTTON MIXIN
+// source: https://gist.github.com/eriku/5997c64d3a145a6f5985
+// ------------------------------
+@mixin button(
+    $button-color: $red,
+    $text-color: #fff,
+    $button-hover-color: "",
+    $button-hover-text-color: "",
+    $height: 4rem,
+    $radius: 2px
+) {
+    // Standard Button Styles
+    padding: 0 35px;
+    display: inline-block;
+    border: 0;
+    border-radius: $radius;
+    color: $text-color;
+    background-color: $button-color;
+    text-decoration: none;
+    text-transform: none;
+    text-align: center;
+    font-weight: $fw-medium;
+    font-size: 1.4rem;
+    cursor: pointer;
+    line-height: $height;
+
+    @include transition(
+        color $animation-duration $animation-timing-function,
+        background-color $animation-duration $animation-timing-function
+    );
+
+    // Button Hover Styles
+    &:hover {
+        color: $button-hover-text-color !important;
+        background-color: $button-hover-color;
+    }
+
+    &-lg {
+        padding: 1rem 4.5rem;
+        height: $height + 5;
+    }
+    &-sm {
+        padding: 0.8rem 3rem;
+    }
+}
+
+input[type="submit"] {
+    padding: 0.8rem 3rem;
+    @include button($colour-3, "#fff", $btn-hover-colour, "#fff");
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type="search"]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+input[type="search"]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+.btn {
+    @include button($colour-3, #fff, $btn-hover-colour, #fff);
+}
+
+// menu button
+.btn-menu {
+    a {
+        padding: 1rem 4.5rem;
+        height: 4.5rem;
+        min-width: 170px;
+        display: inline-block;
+        border: 0;
+        border-radius: $border-radius;
+        color: $colour-white;
+        background-color: $btn-initial-colour;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: $fw-bold;
+        font-size: 1.4rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $btn-hover-colour;
+            color: $colour-white !important;
+        }
+
+        @include screen("tablet-down") {
+            padding-left: 10rem !important;
+            padding-right: 10rem !important;
+            background-color: transparent;
+            color: $colour-2;
+            text-align: left;
+            display: block;
+            height: auto;
+            text-transform: capitalize;
+            font-size: 2.2rem;
+            font-weight: $fw-regular;
+        }
+    }
+}
+
+// cta button
+.btn-cta {
+    margin-top: 4rem;
+    padding: 0 12.6rem;
+    font-family: $primary-font;
+    letter-spacing: 0.14rem;
+
+    @include screen("mobile") {
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
+
+// btn-outline
+.btn-outline {
+    padding: 1.5rem 3.2rem 1.5rem 1.4rem;
+    background-color: transparent;
+    color: $btn-initial-colour;
+    border: 1px solid $btn-initial-colour;
+    font-family: $primary-font;
+
+    &:hover {
+        path {
+            fill: white;
+        }
+    }
+
+    .text {
+        letter-spacing: 0.14rem;
+    }
+}
+
+// button
+button {
+    &:not(.hamburger) {
+        @include button($colour-3, #fff, $colour-2, #fff);
+    }
+}

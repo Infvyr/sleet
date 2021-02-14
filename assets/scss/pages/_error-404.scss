@@ -1,0 +1,49 @@
+.error404{
+  .header-inner{
+    position: static;
+    background-color: $color-1;
+  }
+}
+.error404-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 80vh;
+}
+.back-wrapper{
+  margin-top: 2.5rem;
+
+  .button{
+    padding: 15px 35px;
+
+    &:hover{
+      background-color: $color-3;
+    }
+  }
+}
+
+@media (max-width: $xs){
+  .error404-content{
+    .search-form{
+      display: flex;
+      flex-direction: column;
+
+      .search-submit{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+@media (max-width: $xsw) {
+  .error404-content{
+    padding-top: 20%;
+    padding-bottom: 10%;
+  }
+}
+@media (min-width: $xl){
+  .site-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}

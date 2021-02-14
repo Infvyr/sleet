@@ -1,0 +1,289 @@
+// Gravity form
+.gfield_error {
+	textarea,
+	input:not([type='checkbox']),
+	.ginput_container_fileupload,
+	.dk-selected,
+	.ginput_container_consent input ~ label:before{
+		border-color: $error-colour;
+	}
+}
+.gfield_required{
+	color: $error-colour;
+	margin-left: 3px;
+	//display: none;
+}
+.validation_error {
+	//padding: 0 15px;
+	color: $error-colour;
+	width: 100%;
+	margin-bottom:1.6rem;
+}
+.validation_message{
+	display: none;
+}
+
+.gform_wrapper{
+	.gform_fields{
+		padding-left: 0;
+		list-style-type: none;
+	}
+}
+.gform_body{
+	input,
+	textarea{
+		padding-top: 6px;
+		padding-bottom: 6px;
+		border-radius: $border-radius;
+		border-color: transparent;
+		background-color: transparent;
+		@include transition();
+
+		&:focus,
+		&:hover{
+			background-color: $colour-7;
+		}
+	}
+	.ginput_container_textarea{
+		textarea{
+			width: 100%;
+			max-height: 230px;
+			resize: vertical;
+		}
+	}
+	.gfield textarea,
+	.gfield input:not([type='checkbox']){
+		width: 100%;
+	}
+	.gfield{
+		margin-bottom: .8rem;
+	}
+}
+.gfield_label{
+	margin-bottom: 2px;
+}
+.gform_footer {
+	margin-top: 15px;
+	input[type="submit"]{
+		padding: 12px 2.5rem;
+		width: 100%;
+		border: 0;
+		outline: 0;
+		background-color: $colour-3;
+		border-radius: $border-radius;
+		font-size: $btn-text-size;
+		font-weight: $fw-bold;
+	}
+}
+
+// ninja forms
+.nf-form-fields-required,
+.ninja-forms-req-symbol,
+#nf-form-errors-1{
+	display: none;
+}
+.nf-error-required-error,
+.nf-error-msg{
+	font-size: 12px;
+	line-height: 1.1;
+}
+.nf-response-msg{
+	p{
+		margin-top: 0;
+		font-size: 1.4rem;
+	}
+}
+.nf-error.field-wrap .nf-field-element:after{
+	width: 37px !important;
+	height: 37px !important;
+	line-height: 38px !important;
+}
+
+.checkbox-wrap .nf-field-label label.nf-checked-label:before{
+	color: $colour-3 !important;
+}
+
+input[type="button"]{
+	&.nf-element{
+		width: 100% !important;
+		font-size: 1.4rem;
+		font-weight: $fw-bold;
+		letter-spacing: 0.14rem;
+		background-color: $colour-3 !important;
+		//color: $colour-white !important;
+		cursor: pointer;
+
+		&:hover{
+			//background-color: $btn-hover-colour !important;
+		}
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="button"]{
+	&.nf-element{
+		height: 4rem !important;
+		border-radius: $border-radius !important;
+	}
+}
+
+// footer form
+.footer-form{
+	.content-wrapper{
+		margin: 0 auto;
+		padding-left: 0;
+		max-width: 976px;
+	}
+}
+
+// custom wrapper class added within ninja form display settings
+.contact-form-wrapper{
+	padding: 29px 38px 1px;
+	background-color: $colour-8;
+	//color: $colour-white;
+	border-radius: $border-radius + 3;
+
+	.nf-form-title{
+		text-align: center;
+
+		h3{
+			margin-bottom: 2.5rem;
+			color: $colour-7;
+			font-size: 1.8rem;
+
+			@include screen('mobile'){
+				padding-left: 3rem;
+				padding-right: 3rem;
+				line-height: 28px;
+			}
+		}
+	}
+
+	.nf-form-content{
+		padding: 0;
+
+		nf-fields-wrap{
+			display: flex;
+			flex-wrap: wrap;
+
+			nf-field{
+				&:first-child{
+					margin-right: 3rem;
+					flex: 1;
+
+					@include screen('mobile'){
+						margin-right: 0;
+					}
+				}
+				&:nth-child(2){
+					margin-right: 3rem;
+					flex: 1;
+
+					@include screen('mobile'){
+						margin-right: 0;
+						margin-bottom: 5px;
+					}
+				}
+				&:nth-child(3){
+					flex: 1;
+
+					@include screen('mobile'){
+						margin-bottom: 2.5rem;
+					}
+				}
+				&:nth-child(4){
+					width: 100%;
+				}
+
+
+			}
+			@include screen('mobile'){
+				flex-direction: column;
+			}
+		}
+
+		.nf-field-container{
+			@include screen('mobile'){
+				margin-bottom: 0;
+			}
+		}
+
+		label{
+			font-size: 15px;
+			font-weight: $fw-regular;
+		}
+
+		input:not([type="button"]){
+			color: $colour-2 !important;
+		}
+	}
+	.checkbox-wrap .nf-field-label label:after{
+		background: transparent;
+		border-radius: 1px;
+	}
+
+	@include screen('mobile'){
+		padding-left: 2.2rem;
+		padding-right: 2.2rem;
+		padding-bottom: 1.2rem;
+	}
+}
+
+.contact-form{
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="button"],
+	textarea{
+		&.nf-element{
+			background-color: $colour-7;
+			border: 0;
+			
+			&:focus{
+				background-color: $colour-8;
+			}
+		}
+	}
+	textarea{
+		&.nf-element{
+			height: 129px !important;
+		}
+	}
+
+	.nf-form-content{
+		.label-above{
+			.nf-field-label{
+				margin-bottom: .8rem;
+			}
+		}
+		label{
+			font-size: 1.6rem !important;
+			font-weight: $fw-regular !important;
+		}
+	}
+	.nf-field-container{
+		margin-bottom: 15px;
+	}
+}
+
+
+.nf-form-cont{
+	.nf-form-content{
+		padding: 0;
+	}
+	input,
+	textarea{
+		border: 0 !important;
+		color: $colour-2 !important;
+		background-color: $colour-7 !important;
+
+		&:focus,
+		&:hover{
+			background-color: $colour-7 !important;
+		}
+	}
+}

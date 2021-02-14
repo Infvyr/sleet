@@ -1,0 +1,98 @@
+// this is how to include a variable font
+//@font-face {
+//  font-family: "Inter var";
+//  font-weight: 100 900; /* stylelint-disable-line font-weight-notation */
+//  font-style: normal;
+//  font-display: swap;
+//  src: url(./assets/fonts/inter/Inter-upright-var.woff2) format("woff2");
+//}
+//
+//@font-face {
+//  font-family: "Inter var";
+//  font-weight: 100 900; /* stylelint-disable-line font-weight-notation */
+//  font-style: italic;
+//  font-display: swap;
+//  src: url(./assets/fonts/inter/Inter-italic-var.woff2) format("woff2");
+//}
+
+
+/*
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-display: swap;
+  //src: url(./assets/fonts/josefin/JosefinSans-VariableFont_wght.ttf) format("truetype");
+  src: url(./assets/fonts/josefin/JosefinSans-Regular.ttf) format("truetype");
+}
+*/
+
+// Suisse font pack
+@include font-face-otf("Suisse Regular", "../fonts/Suisse/SuisseBPIntl-Regular", $style: normal, $weight: normal);
+@include font-face-otf("Suisse Medium", "../fonts/Suisse/SuisseBPIntl-Medium", $style: normal, $weight: 500);
+@include font-face-otf("Suisse Bold", "../fonts/Suisse/SuisseBPIntl-Bold", $style: normal, $weight: bold);
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: $primary-font;
+  //font-weight: $fw-bold;
+}
+
+h1{
+  font-size: calc(1.375rem + 1.5vw);
+  line-height: $h1-line-height;
+
+  @include screen('tablet-up'){
+    font-size: $h1-size;
+  }
+}
+
+h2{
+  font-size: calc(1.325rem + 0.9vw);
+  line-height: $h2-line-height;
+
+  @include screen('tablet-up'){
+    font-size: $h2-size;
+  }
+}
+
+h3{
+  font-size: calc(1.3rem + 0.6vw);
+  line-height: $h3-line-height;
+
+  @include screen('tablet-up'){
+    font-size: $h3-size;
+  }
+}
+
+h4{
+  font-size: calc(1.275rem + 0.3vw);
+  line-height: $h4-line-height;
+
+  @include screen('tablet-up'){
+    font-size: $h4-size;
+  }
+}
+
+h5{
+  font-size: calc(1.175rem + 0.2vw);
+  line-height: $h5-line-height;
+
+  @include screen('tablet-up'){
+    font-size: $h5-size;
+  }
+}
+
+h6{
+  font-size: calc(1.125rem + 0.1vw);
+  line-height: $h6-line-height;
+
+  @include screen('tablet-up'){
+    font-size: $h6-size;
+  }
+}
+

@@ -1,0 +1,31 @@
+.content-posts{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+// our people archive
+.post-type-archive-our-people{
+  .pagination-wrapper:not(.jplist-pagination){
+    @include screen('mobile'){
+      display: none;
+    }
+  }
+  .post-our-people{
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include screen('max-width: 576px'){
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.posts-grid-people{
+  margin-top: 4.5rem;
+}
+
+.load-more-wrapper{
+  margin-top: 1.6rem;
+  margin-bottom: 70px;
+}

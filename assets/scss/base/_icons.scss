@@ -1,0 +1,65 @@
+.icon{
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &-facebook{
+    background-image: url(../images/svg-icons/facebook.svg);
+  }
+  &-instagram{
+    background-image: url(../images/svg-icons/instagram.svg);
+  }
+  &-twitter{
+    background-image: url(../images/svg-icons/twitter.svg);
+  }
+  &-linkedin{
+    background-image: url(../images/svg-icons/linkedin.svg);
+  }
+  &-gplus{
+    background-image: url(../images/svg-icons/gplus.svg);
+  }
+  &-pinterest{
+    background-image: url(../images/svg-icons/pinterest.svg);
+  }
+}
+
+.info-link{
+  color: $colour-4;
+  @include d-flex{
+    justify-content: getJustify(c);
+    align-items: getAlign(c);
+  }
+
+  &__text{
+    font-size: 2.4rem;
+
+    @include screen('tablet'){
+      font-size: 1.6rem;
+    }
+  }
+
+  .icon-phone{
+    margin-right: 1.6rem;
+  }
+  .envelope-icon{
+    margin-right: 13.96px;
+  }
+
+  @include screen('tablet'){
+    margin-bottom: .8rem;
+  }
+}
+
+.icon-arrow{
+  margin-left: 1rem;
+  color: $colour-1;
+
+  svg{
+    width: 1.8rem;
+  }
+}

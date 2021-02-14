@@ -1,0 +1,65 @@
+.hero{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &:before{
+    content: '';
+    @include absolute(top 0 left 0 right 0 bottom 0);
+    width: 100%;
+    background-color: rgba(0,0,0, .4);
+  }
+
+  .container,
+  .row{
+    height: 100%;
+  }
+  .row > [class*="col-"]{
+    height: inherit;
+  }
+
+  &__wrapper{
+    @include d-flex{
+      align-items: getAlign(c);
+      justify-content: getJustify(c);
+    }
+    height: inherit;
+
+    @include screen('mobile'){
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  &__title{
+    color: $colour-white;
+    text-align: center;
+  }
+
+  @include screen('desktop'){
+    margin-bottom: 98px;
+    height: 240px;
+  }
+  @include screen('tablet-down'){
+    margin-bottom: 60px;
+    height: 200px;
+  }
+  @include screen('mobile'){
+    margin-bottom: 57px;
+    height: 221px;
+  }
+}
+
+
+// hero specific pages
+.post-type-archive-our-people,
+.post-template-template-blog-story{
+  .hero{
+    @include screen('desktop'){
+      background-position-y: bottom;
+    }
+  }
+}

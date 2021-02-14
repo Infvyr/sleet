@@ -1,0 +1,206 @@
+/* Search Form ------------------------------- */
+
+.search-form {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 0 -0.8rem -0.8rem;
+}
+
+.search-form .search-field,
+.search-form .search-submit {
+  margin: 0 0 0.8rem 0.8rem;
+}
+
+.search-form label {
+  align-items: stretch;
+  display: flex;
+  font-size: inherit;
+  margin: 0;
+  width: 100%;
+}
+
+.search-form .search-field {
+  width: 100%;
+}
+
+.search-form .search-submit {
+  flex-shrink: 0;
+}
+
+.search-form .search-submit:focus,
+.search-form .search-submit:hover {
+  text-decoration: none;
+}
+body:not(.enable-search-modal) .site-logo img {
+  margin: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+
+/*	6. Search Modal
+/* -------------------------------------------------------------------------- */
+
+
+.search-modal {
+  background: rgba(0, 0, 0, 0.2);
+  display: none;
+  opacity: 0;
+  position: fixed;
+  bottom: 0;
+  left: -9999rem;
+  top: 0;
+  transition: opacity 0.2s linear, left 0s 0.2s linear;
+  width: 100%;
+  z-index: 999;
+}
+
+.admin-bar .search-modal.active {
+  top: 3.2rem;
+}
+
+@media (max-width: 782px) {
+
+  .admin-bar .search-modal.active {
+    top: 46px;
+  }
+}
+
+.search-modal-inner {
+  background: #fff;
+  transform: translateY(-100%);
+  transition: transform 0.15s linear, box-shadow 0.15s linear;
+}
+
+.search-modal-inner .section-inner {
+  //padding-left: 2rem;
+  //padding-right: 2rem;
+  display: flex;
+  justify-content: space-between;
+  //max-width: 168rem;
+}
+
+.search-modal.active {
+  left: 0;
+  opacity: 1;
+  transition: opacity 0.2s linear;
+}
+
+.search-modal.active .search-modal-inner {
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.08);
+  transform: translateY(0);
+  transition: transform 0.25s ease-in-out, box-shadow 0.1s 0.25s linear;
+}
+
+.header-inner button.search-untoggle {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  //margin-right: -2.5rem;
+  //padding: 0 2.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.search-modal button.search-untoggle {
+  color: inherit;
+}
+
+.search-modal.active .search-untoggle {
+  animation: popIn both 0.3s 0.2s;
+}
+
+.search-untoggle svg {
+  height: 1.5rem;
+  transition: transform 0.15s ease-in-out;
+  width: 1.5rem;
+}
+
+.search-untoggle:focus svg,
+.search-untoggle:hover svg {
+  transform: scale(1.15);
+}
+
+
+/* Modal Search Form ------------------------- */
+
+.search-modal form {
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+
+.search-modal .search-field {
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: inherit;
+  font-size: 2rem;
+  height: 8rem;
+  margin: 0;
+  //max-width: calc(100% + 2rem);
+  //padding: 0 0 0 2rem;
+  //width: calc(100% + 2rem);
+}
+
+.search-modal .search-field::-webkit-input-placeholder {
+  color: inherit;
+}
+
+.search-modal .search-field:-ms-input-placeholder {
+  color: inherit;
+}
+
+.search-modal .search-field::-moz-placeholder {
+  color: inherit;
+  line-height: 4;
+}
+
+.search-modal .search-submit {
+  position: absolute;
+  right: -9999rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-modal .search-submit:focus {
+  right: 0;
+}
+
+
+@media (min-width: 700px){
+  .search-modal form {
+    position: relative;
+    width: 100%;
+  }
+
+  .search-untoggle svg {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .search-modal .search-field::-moz-placeholder {
+    line-height: 4.375;
+  }
+}
+.cover-modal {
+  display: none;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+.cover-modal::-webkit-scrollbar {
+  display: none !important;
+}
+
+.cover-modal.show-modal {
+  display: block;
+  cursor: pointer;
+}
+
+.cover-modal.show-modal > * {
+  cursor: default;
+}

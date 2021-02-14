@@ -1,0 +1,44 @@
+// site footer
+.site-footer {
+    ul {
+        list-style-type: none;
+    }
+
+    &__wrapper {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+
+        @include screen("mobile") {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+    }
+}
+
+// site copyright
+.site-copyright {
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+}
+
+// footer modifier
+.footer--dark {
+    background-color: $colour-8;
+    color: $colour-7;
+
+    a {
+        &:not(:hover) {
+            color: $colour-7;
+        }
+    }
+}
+.footer--light {
+    background-color: $colour-7;
+    color: $colour-8;
+
+    a {
+        &:not(:hover) {
+            color: $colour-8;
+        }
+    }
+}
