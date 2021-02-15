@@ -36,14 +36,6 @@ function sleet_enqueue_assets()
 		true
 	);
 
-	wp_enqueue_script(
-		'sleet-mmenu-library',
-		THEME_URL . '/assets/js/libs/mmenu.js',
-		false,
-		false,
-		true
-	);
-
 
 	/*if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
