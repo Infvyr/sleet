@@ -1,1 +1,6 @@
-import './components/mobile-menu';
+import MobileMenu from './components/MobileMenu';
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    MobileMenu();
+});

@@ -1,5 +1,4 @@
 @import "hamburgers/hamburgers";
-@import "../vendors/mmenu";
 
 .site-header {
     position: sticky;
@@ -137,9 +136,30 @@
 // mobile menu
 .mobile-nav {
     background-color: $menu-bg-colour;
+    max-height: 0;
+    @include visibility-off();
+    @include transition(
+        opacity $animation-duration $animation-timing-function,
+        max-height $animation-duration $animation-timing-function
+    );
 
-    &.mm-menu_opened {
-        z-index: 99999;
+    .mobile-menu {
+        > li {
+            @include visibility-off();
+            @include transition(
+                opacity $animation-duration - 50ms $animation-timing-function
+            );
+        }
+    }
+
+    &.is-active {
+        @include visibility-on();
+
+        .mobile-menu {
+            > li {
+                @include visibility-on();
+            }
+        }
     }
 
     @include screen("desktop") {
