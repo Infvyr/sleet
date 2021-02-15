@@ -47,11 +47,11 @@
 				</div>
 				<div class="col-8">
 					<div id="site-navigation" class="main-navigation">
-						<a id="mobile-menu-trigger" href="#mobile-menu" class="mobile-menu-btn hamburger hamburger--emphatic" aria-controls="mobile-nav" type="button" aria-label="Menu" aria-controls="navigation">
+						<button id="toggle-mobile-menu" class="mobile-menu-btn hamburger hamburger--emphatic" aria-controls="mobile-nav" type="button" aria-label="Menu" aria-controls="navigation">
 							<span class="hamburger-box">
 								<span class="hamburger-inner"></span>
 							</span>
-						</a>
+						</button>
 						<?php
 						sleet_show_menu(
 							$theme_location = 'menu-1',
@@ -65,6 +65,15 @@
 			</div>
 		</div>
 
+		<?php
+		sleet_show_menu(
+			$theme_location = 'menu-3',
+			$container_class = 'mobile-nav',
+			$container_class = 'mobile-menu',
+			$menu_class = 'mobile-menu site-menu--mobile no-list-type',
+			$menu_id = 'mobile-menu-inner'
+		);
+		?>
 	</header>
 
 	<?php do_action('sleet_site_after_header'); ?>
