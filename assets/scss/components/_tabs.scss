@@ -1,0 +1,12 @@
+.tabs {
+    &__list {
+        margin: 0;
+        padding: 0;
+        @include d-flex;
+        list-style: none;
+    }
+
+    &__li {
+        padding: 5px;
+    }
+}
