@@ -52,7 +52,12 @@ To start using all the tools that come with `sleet` you need to install the nece
 is to replace within -`gulpfile.babel.js` on line 45 the proxy url with yours.
 
 ### Must have plugins
-`sleet` theme needs __Advanced Custom Fields Pro__ or free version. 
+
+`sleet` theme needs **Advanced Custom Fields Pro** or free version.
+
+### Project sample
+
+You may download a WordPress [copy from here](https://bit.ly/37XmJ9I). Throw these files into your domain directory and access http(s)://domain.example/installer.php and follow the steps from the installation wizard
 
 Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
 
