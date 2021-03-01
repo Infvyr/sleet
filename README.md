@@ -57,7 +57,7 @@ is to replace within -`gulpfile.babel.js` on line 45 the proxy url with yours.
 
 ### Project sample
 
-You may download a WordPress [copy from here](https://bit.ly/37XmJ9I). Throw these files into your domain directory and access **http(s)://domain.example/installer.php** and follow the steps from the installation wizard
+You may download a WordPress [copy from here](https://bit.ly/37XmJ9I). Throw these files into your domain directory and access in the browser address bar a url like this one but with your domain name **domain.example/installer.php** and follow the steps from the installation wizard.
 
 Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
 
