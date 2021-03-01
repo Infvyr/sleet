@@ -1,1 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="22" height="14" class="svg-arrow-right"><path id="Path_6478" data-name="Path 6478" d="M663.626 764.308l4-5h-18v-2h18l-4-4 1-2 7 7-7 7z" transform="translate(-649.626 -751.308)" fill="#35b5ff"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="14" viewBox="0 0 22 14" class="svg-arrow-right">
+    <path id="Path_6478" data-name="Path 6478" d="M663.626,764.308l4-5h-18v-2h18l-4-4,1-2,7,7-7,7Z" transform="translate(-649.626 -751.308)" fill="#35b5ff"/>
+</svg>
