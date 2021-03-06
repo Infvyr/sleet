@@ -55,8 +55,12 @@ $column_class = (is_active_sidebar('sidebar-1')) ? 'col-12 col-md-9' : 'col-12';
 
                     </div>
 
-                    <div class="page-inner-pagination">
-                        <?php the_posts_navigation(); ?>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-inner-pagination">
+                                <?php the_posts_navigation(); ?>
+                            </div>
+                        </div>
                     </div>
 
                 <?php
