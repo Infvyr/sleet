@@ -1,0 +1,54 @@
+// post card
+.post {
+    &__image {
+        &.default-image {
+            .post__image {
+                @include image-absolute;
+
+                > source,
+                img {
+                    @include image-absolute;
+                }
+            }
+        }
+    }
+    &__header {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    &__excerpt {
+        margin-bottom: 2rem;
+    }
+    &__footer {
+    }
+    &__link {
+        display: block;
+        @include sixteen-by-nine();
+    }
+    .wp-post-image {
+        @include image-absolute;
+    }
+    &__title {
+    }
+    &__btn {
+        @include d-flex;
+        align-items: center;
+
+        &:hover {
+            .svg-arrow-right {
+                width: 1.5rem;
+            }
+        }
+    }
+    .svg-arrow-right {
+        margin-left: 1rem;
+        width: 0;
+        @include transition(
+            width $animation-duration $animation-timing-function
+        );
+    }
+
+    @include screen("mobile") {
+        margin-bottom: 3rem;
+    }
+}
