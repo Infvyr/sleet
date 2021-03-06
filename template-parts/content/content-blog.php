@@ -29,7 +29,7 @@
       <?php the_excerpt(); ?>
     </div>
 
-    <footer class="entry-footer">
+    <footer class="post__footer">
       <?php sleet_read_more_button(); ?>
     </footer>
   </article>
